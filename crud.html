@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Polibotique</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="shortcut icon" href="images/fav-icon.png"/>
+</head>
+
+<body>
+    <nav class="navigation">
+        <a href="index.html" class="logo">Polibotique</a>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon">
+                <i class="fas fa-bars"></i></span>
+        </label>
+        <ul class="menu">
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+			<li><a href="C:\Users\unfab\OneDrive\Escritorio\ecommerce\bajo_construccion.html">Carrito de compra</a></li>
+            <li><a href="crud.html">Admin</a></li>
+        </ul>
+        <div class="right-elements">
+        </div>
+    </nav>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Nombre</label><label class="validation-error hide" id="fullNameValidationError">Campo requerido.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Precio</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>Descripción</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>Stock actual</label>
+                        <input type="text" name="city" id="city" value="0" onchange="sumar();">
+                    </div>
+                    <div>
+                        <label>Agregar stock</label>
+                        <input type="text" name="city" id="city2" value="0" onchange="sumar();">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Guardar">
+                    </div>
+                    <script>
+                        // si la respuesta que se espera es sumar
+                        function sumar(){
+                            var numero1 = document.getElementById('city').value;
+                            var numero2 = document.getElementById('city2').value;
+                    
+                            if(numero1!=='' && numero2!==''){
+                                var suma = parseInt(numero1)+parseInt(numero2);
+                                document.getElementById('city').value = suma;
+                            }
+                        }
+                    </script>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Descripción</th>
+                            <th>Salario</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo-container">
+                <div class="footer-logo">
+                    Polibotique
+                </div>
+                <span>&#169; 2022 Polibotique</span> 
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu-box">
+                    <strong>Productos</strong>
+                    <ul>
+                        <li><a href="#">Tendencias</a></li>
+                        <li><a href="#">Mujeres</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu-box">
+                    <strong>Contacto</strong>
+                    <ul>
+                        <li>contacto@polibotique.cl</li>
+                        <li>+569 1234 5678</li>
+                    </ul>
+                </div>
+                <div class="footer-menu-box">
+                    <strong>Polibotique</strong>
+                    <ul>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Quienes somos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </br>
+    </footer>
+    
+</body>
+
+</html>
